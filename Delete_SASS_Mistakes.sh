@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Delete folder
-cd src/css
+cd src/style
 echo "Deleting my compiler mistakes!"
 sleep 1
 rm -rf mobile.css mobile.css.map 2> /dev/null

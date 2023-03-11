@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="src/style/style.css" type="text/css">
     <title>Lottery Ui</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="src/images/hinamizawa.png">
+
   </head>
   <!-- Body contents -->
   <body>
@@ -14,39 +16,77 @@
     <div class="container">
       <div class="lottery_input">
         <h4>Enter your lottery number:</h4>
-        <input type="number" id="myInput">
+        <input type="number" id="myInput" value="4930"/>
+        <div class="button_container">
         <button type="button" onclick="submitInput()">Submit</button>
+        <button type="button" onclick="submitClear()">Clear</button>
+      </div>
       </div>
       <p id="error_1"></p>
-      <span><h4>Base Grid</h4></span>
+      <div class="lottery_container">
+      <div class="lottery_base_grid">
+      <span class="lottery_titles"><h4>Base Grid:</h4></span>
       <div class="lottery_ui">
         <div class="lottery_ui_column_1">
-          <div id="slot_1">1</div>
-          <div id="slot_2">2</div>
+          <div id="slot_1" style="color:red">1</div>
+          <div id="slot_2" >2</div>
           <div id="slot_3">3</div>
           <div id="slot_4">4</div>
         </div>
         <div class="lottery_ui_column_2">
           <div id="slot_5">5</div>
-          <div id="slot_6">6</div>
+          <div id="slot_6" style="color:red">6</div>
           <div id="slot_7">7</div>
           <div id="slot_8">8</div>
         </div>
         <div class="lottery_ui_column_3">
           <div id="slot_9">9</div>
           <div id="slot_10">10</div>
-          <div id="slot_11">11</div>
+          <div id="slot_11" style="color:red">11</div>
           <div id="slot_12">12</div>
         </div>
         <div class="lottery_ui_column_4">
           <div id="slot_13">13</div>
           <div id="slot_14">14</div>
           <div id="slot_15">15</div>
-          <div id="slot_16">16</div>
+          <div id="slot_16" style="color:red;">16</div>
         </div>
       </div>
       <button type="button" onclick="generateReport()">Generate Report</button>
     </div>
+      <div class="lottery_mirror_grid">
+      <span class="lottery_titles"><h4>Mirror + 5 Grid:</h4></span>
+      <div class="lottery_ui">
+        <div class="lottery_ui_column_1">
+          <div id="slot_1_mirror">1</div>
+          <div id="slot_2_mirror">2</div>
+          <div id="slot_3_mirror">3</div>
+          <div id="slot_4_mirror">4</div>
+        </div>
+        <div class="lottery_ui_column_2">
+          <div id="slot_5_mirror">5</div>
+          <div id="slot_6_mirror">6</div>
+          <div id="slot_7_mirror">7</div>
+          <div id="slot_8_mirror">8</div>
+        </div>
+        <div class="lottery_ui_column_3">
+          <div id="slot_9_mirror">9</div>
+          <div id="slot_10_mirror">10</div>
+          <div id="slot_11_mirror">11</div>
+          <div id="slot_12_mirror">12</div>
+        </div>
+        <div class="lottery_ui_column_4">
+          <div id="slot_13_mirror">13</div>
+          <div id="slot_14_mirror">14</div>
+          <div id="slot_15_mirror">15</div>
+          <div id="slot_16_mirror">16</div>
+        </div>
+      </div>
+      <button type="button" onclick="generateReport()">Generate Report</button>
+    </div>
+  </div>
+    </div>
+    
     <!-- Footer wowie :v -->
     <footer>
       <div class="footer-container">
