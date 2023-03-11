@@ -1,0 +1,16 @@
+const slot1_flip= document.getElementById("slot_1_flip");
+const slot2_flip= document.getElementById("slot_2_flip");
+const slot3_flip= document.getElementById("slot_3_flip");
+const slot4_flip= document.getElementById("slot_4_flip");
+const slot5_flip= document.getElementById("slot_5_flip");
+const slot6_flip= document.getElementById("slot_6_flip");
+const slot7_flip= document.getElementById("slot_7_flip");
+const slot8_flip= document.getElementById("slot_8_flip");
+const slot9_flip= document.getElementById("slot_9_flip");
+const slot10_flip = document.getElementById("slot_10_flip");
+const slot11_flip = document.getElementById("slot_11_flip");
+const slot12_flip = document.getElementById("slot_12_flip");
+const slot13_flip = document.getElementById("slot_13_flip");
+const slot14_flip = document.getElementById("slot_14_flip");
+const slot15_flip = document.getElementById("slot_15_flip");
+const slot16_flip = document.getElementById("slot_16_flip");

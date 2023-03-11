@@ -2,12 +2,18 @@
   --var-button_background: #40A8BF;
   --var-background_color: antiquewhite;
 }
-body {
+html, body {
+  height: 100%;
   margin: 0;
-  padding: 0;
   font-family: "Roboto", sans-serif;
   background-color: var( --var-background_color);
 }
+
+// body {
+//   margin: 0;
+//   padding: 0;
+
+// }
 
 .container {
   display: flex;
@@ -52,7 +58,13 @@ button {
   cursor: pointer;
   margin-top: 20px;
 }
-
+.lottery_answers_ui {
+  display:flex;
+  flex-direction:row;
+  div {
+    margin-right:2px;
+  }
+}
 .lottery_ui {
   display: flex;
   flex-direction: row;
@@ -82,24 +94,33 @@ button {
     }
   }
 }
+$footer-height: 50px; // set the height of the footer
+
+.wrapper {
+  min-height: 100%;
+  margin-bottom: -$footer-height;
+}
+
 footer {
   background-color: #333;
   color: #fff;
   text-align: center;
   padding: 10px;
-  margin-top:10px;
+  width: 100%;
+  height: $footer-height;
+  position: static;
+  margin-top: 10px;
+
   a {
     color: #fff;
     text-decoration: none;
  
+    &:hover {
+      text-decoration:underline;
+      color: var(--var-button_background);
+    }
   }
-  a:hover {
-    text-decoration:underline;
-    color: var(--var-button_background);
-  }
-  
 }
-
 
 
 @import "mobile";

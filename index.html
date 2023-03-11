@@ -18,11 +18,35 @@
         <h4>Enter your lottery number:</h4>
         <input type="number" id="myInput" value="4930"/>
         <div class="button_container">
-        <button type="button" onclick="submitInput()">Submit</button>
-        <button type="button" onclick="submitClear()">Clear</button>
+          <button type="button" onclick="submitInput()">Submit</button>
+          <button type="button" onclick="generateReport()">Generate Report</button>     
+          <button type="button" onclick="submitClear()">Clear</button>
+        </div>
       </div>
+      <p id="error_1" style="font-weight:bold;font-size:14px;"></p>
+      <div class="lottery_answers">
+        <span class="lottery_titles"><h4>Answers:</h4></span>
+        <div class="lottery_answers_ui">
+          <div id="slot_base_answer">
+            <div id="slot_base_answer_1">NULL</div>
+            <div id="slot_base_answer_2">NULL</div>
+            <div id="slot_base_answer_3">NULL</div>
+            <div id="slot_base_answer_4">NULL</div>
+          </div>
+          <div id="slot_mirror_answer"> 
+          <div id="slot_mirror_answer_1">NULL</div>
+          <div id="slot_mirror_answer_2">NULL</div>
+          <div id="slot_mirror_answer_3">NULL</div>
+          <div id="slot_mirror_answer_4">NULL</div>
+        </div>
+          <div id="slot_flip_answer"> 
+          <div id="slot_flip_answer_1">NULL</div>
+          <div id="slot_flip_answer_2">NULL</div>
+          <div id="slot_flip_answer_3">NULL</div>
+          <div id="slot_flip_answer_4">NULL</div>
+        </div>
+        </div>
       </div>
-      <p id="error_1"></p>
       <div class="lottery_container">
       <div class="lottery_base_grid">
       <span class="lottery_titles"><h4>Base Grid:</h4></span>
@@ -52,7 +76,6 @@
           <div id="slot_16" style="color:red;">16</div>
         </div>
       </div>
-      <button type="button" onclick="generateReport()">Generate Report</button>
     </div>
       <div class="lottery_mirror_grid">
       <span class="lottery_titles"><h4>Mirror + 5 Grid:</h4></span>
@@ -82,11 +105,40 @@
           <div id="slot_16_mirror">16</div>
         </div>
       </div>
-      <button type="button" onclick="generateReport()">Generate Report</button>
+      
     </div>
+    <div class="lottery_flip_grid">
+      <span class="lottery_titles"><h4>Flip Grid:</h4></span>
+      <div class="lottery_ui">
+        <div class="lottery_ui_column_1">
+          <div id="slot_1_flip">1</div>
+          <div id="slot_2_flip">2</div>
+          <div id="slot_3_flip">3</div>
+          <div id="slot_4_flip">4</div>
+        </div>
+        <div class="lottery_ui_column_2">
+          <div id="slot_5_flip">5</div>
+          <div id="slot_6_flip">6</div>
+          <div id="slot_7_flip">7</div>
+          <div id="slot_8_flip">8</div>
+        </div>
+        <div class="lottery_ui_column_3">
+          <div id="slot_9_flip">9</div>
+          <div id="slot_10_flip">10</div>
+          <div id="slot_11_flip">11</div>
+          <div id="slot_12_flip">12</div>
+        </div>
+        <div class="lottery_ui_column_4">
+          <div id="slot_13_flip">13</div>
+          <div id="slot_14_flip">14</div>
+          <div id="slot_15_flip">15</div>
+          <div id="slot_16_flip">16</div>
+        </div>
+      </div>
   </div>
+  
     </div>
-    
+    <div><br><br><br><br><br><br></div>
     <!-- Footer wowie :v -->
     <footer>
       <div class="footer-container">
@@ -94,7 +146,6 @@
         <p>&copy; 2023 All Rights Reserved</p>
       </div>
     </footer>
-    
     <script src="src/js/main.js"></script>
     <script src="src/js/report.js"></script>
   </body>
