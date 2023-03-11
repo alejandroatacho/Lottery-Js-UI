@@ -1,3 +1,4 @@
 /src/style/*.css
 /src/style/*.css.map
 src/style/style.css
+*.txt
