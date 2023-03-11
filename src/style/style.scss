@@ -59,5 +59,24 @@ button {
     }
   }
 }
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  margin-top:10px;
+  a {
+    color: #fff;
+    text-decoration: none;
+ 
+  }
+  a:hover {
+    text-decoration:underline;
+    color: lightblue;
+  }
+  
+}
+
+
 
 @import "mobile";

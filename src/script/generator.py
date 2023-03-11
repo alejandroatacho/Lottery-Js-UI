@@ -2,7 +2,7 @@ from bs4 import BeautifulSoup
 import os
 
 file_path = "index.html"
-
+report_save_path =""
 if os.path.exists(file_path):
     with open(file_path, "r") as file:
         soup = BeautifulSoup(file, "html.parser")
