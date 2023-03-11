@@ -123,7 +123,7 @@ footer a:hover {
 @media all {
   * {
     font-family: Arial, Helvetica, sans-serif;
-    padding: 0;
+    margin: 0;
   }
   p {
     font-size: 12px;
@@ -133,7 +133,6 @@ footer a:hover {
   .container {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     width: 100%;
   }
@@ -148,8 +147,8 @@ footer a:hover {
   }
   button {
     width: 80%;
-    background-color: blue;
-    color: white;
+    background-color: var(--var-button_background);
+    color: var(--var-background_color);
     padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
@@ -159,9 +158,8 @@ footer a:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    height: 100%;
     width: 100%;
+    margin-bottom: 20px;
   }
   .lottery_ui .lottery_ui_column_1,
   .lottery_ui .lottery_ui_column_2,
@@ -169,10 +167,9 @@ footer a:hover {
   .lottery_ui .lottery_ui_column_4 {
     display: flex;
     flex-direction: row;
-    justify-content: center;
     align-items: center;
     width: 100%;
-    height: 100%;
+    margin-bottom: 20px;
   }
   .lottery_ui .lottery_ui_column_1 div,
   .lottery_ui .lottery_ui_column_2 div,
@@ -193,16 +190,17 @@ footer a:hover {
   }
   .container .button_container {
     flex-direction: column;
+    margin-bottom: 20px;
   }
   .container .button_container button {
     margin-bottom: 15px;
   }
   .lottery_container {
     flex-direction: column;
+    align-items: center;
   }
   .lottery_ui {
     width: 100%;
     margin-right: 0;
-    margin-bottom: 20px;
   }
 }/*# sourceMappingURL=style.css.map */
