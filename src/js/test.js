@@ -1,5 +1,6 @@
 function container() {
   var input = document.getElementById('myInput').value;
+  const error = document.getElementById("error_1");
   const slot1 = document.getElementById("slot_1");
   const slot2 = document.getElementById("slot_2");
   const slot3 = document.getElementById("slot_3");
@@ -16,17 +17,14 @@ function container() {
   const slot14 = document.getElementById("slot_14");
   const slot15 = document.getElementById("slot_15");
   const slot16 = document.getElementById("slot_16");
-  return { input, slot1,slot2,slot3,slot4,slot5,slot6,slot7,slot8,slot9,slot10,slot11,slot12,slot13,slot14,slot15,slot16 };
-}
-
-function showAlert() {
-  console.log(values.input);
+  return { input, error, slot1,slot2,slot3,slot4,slot5,slot6,slot7,slot8,slot9,slot10,slot11,slot12,slot13,slot14,slot15,slot16 };
 }
 
 function submitInput() {
   const values = container();
   if (values.input.length !== 4 || isNaN(parseInt(values.input))) {
-    alert('Please enter a 4-digit number');
+    // alert('Please enter a 4-digit number');
+    values.error.innerHTML = "Error, Please enter a 4-digit number! ";
   } else {
     var digits = values.input.toString().split('');
     var firstDigit = parseInt(digits[0]);
@@ -37,47 +35,54 @@ function submitInput() {
     values.slot1.innerHTML = firstDigit; 
     values.slot6.innerHTML = secondDigit; 
     values.slot11.innerHTML = thirdDigit; 
-      values.slot16.innerHTML = fourthDigit; 
+    values.slot16.innerHTML = fourthDigit; 
          if (fourthDigit === 9) {
             
             values.slot15.innerHTML = 0;
-            values.slot14.innerHTML = (fourthDigit - fourthDigit) + 1;
-            values.slot13.innerHTML = (fourthDigit - fourthDigit) + 2;
-            values.slot9.innerHTML = (fourthDigit - fourthDigit) + 3;
-            values.slot5.innerHTML = (fourthDigit - fourthDigit)+ 4;
-            values.slot2.innerHTML = (fourthDigit - fourthDigit) + 5;
-            values.slot3.innerHTML = (fourthDigit - fourthDigit) + 6;
-            values.slot4.innerHTML = (fourthDigit - fourthDigit) + 7;
-            values.slot8.innerHTML = (fourthDigit - fourthDigit) + 8;
-            values.slot12.innerHTML = (fourthDigit - fourthDigit) + 9;
+            values.slot14.innerHTML =  1;
+            values.slot13.innerHTML =  2;
+            values.slot9.innerHTML =  3;
+            values.slot5.innerHTML =  4;
+            values.slot2.innerHTML =  5;
+            values.slot3.innerHTML = 6;
+            values.slot4.innerHTML = 7;
+            values.slot8.innerHTML =  8;
+           values.slot12.innerHTML = 9;
+           values.slot10.innerHTML = 0;
+           values.slot7.innerHTML = 1;
             
    
          }
       else if (fourthDigit === 0) {
             
-            values.slot15.innerHTML = (fourthDigit - fourthDigit) + 1;
-            values.slot14.innerHTML = (fourthDigit - fourthDigit) + 2;
-            values.slot13.innerHTML = (fourthDigit - fourthDigit) + 3;
-            values.slot9.innerHTML = (fourthDigit - fourthDigit) + 4;
-            values.slot5.innerHTML = (fourthDigit - fourthDigit)+ 5;
-            values.slot2.innerHTML = (fourthDigit - fourthDigit) + 6;
-            values.slot3.innerHTML = (fourthDigit - fourthDigit) + 7;
-            values.slot4.innerHTML = (fourthDigit - fourthDigit) + 8;
-            values.slot8.innerHTML = (fourthDigit - fourthDigit) + 9;
-            values.slot12.innerHTML = (fourthDigit - fourthDigit) + 0;
+            values.slot15.innerHTML =  1;
+            values.slot14.innerHTML =2;
+            values.slot13.innerHTML =3;
+            values.slot9.innerHTML =4;
+            values.slot5.innerHTML = 5;
+            values.slot2.innerHTML =6;
+            values.slot3.innerHTML =7;
+            values.slot4.innerHTML =8;
+            values.slot8.innerHTML =9;
+            values.slot12.innerHTML = 0;
+            values.slot10.innerHTML = 1;
+            values.slot7.innerHTML = 2;
       }
-         else {
-             values.slot15.innerHTML = fourthDigit + 1;
-             values.slot14.innerHTML = fourthDigit + 2;
-             values.slot13.innerHTML = fourthDigit + 3;
-             values.slot9.innerHTML = fourthDigit + 4;
-             values.slot5.innerHTML = fourthDigit + 5;
-             values.slot2.innerHTML = fourthDigit + 7;
-             values.slot3.innerHTML = fourthDigit + 8;
-             values.slot4.innerHTML = fourthDigit + 9;
-             values.slot12.innerHTML = fourthDigit + 10;
-       
+      else {
+        values.slot15.innerHTML = (fourthDigit + 1) % 10;
+        values.slot14.innerHTML = (fourthDigit + 2) % 10;
+        values.slot13.innerHTML = (fourthDigit + 3) % 10;
+        values.slot9.innerHTML = (fourthDigit + 4) % 10;
+        values.slot5.innerHTML = (fourthDigit + 5) % 10;
+        values.slot2.innerHTML = (fourthDigit + 6) % 10;
+        values.slot3.innerHTML = (fourthDigit + 7) % 10;
+        values.slot4.innerHTML = (fourthDigit + 8) % 10;
+        values.slot8.innerHTML = (fourthDigit + 9) % 10;
+        values.slot12.innerHTML = (fourthDigit + 0) % 10;
+        values.slot10.innerHTML = (fourthDigit + 1) % 10;
+        values.slot7.innerHTML = (fourthDigit + 2) % 10;
       }
+      
     
   }
 }
