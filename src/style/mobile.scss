@@ -1,0 +1,64 @@
+@media ALL {
+    *{
+        font-family:Arial, Helvetica, sans-serif;
+        padding:0;
+    }
+    p {
+        font-size:12px;
+        
+    }
+}
+@media only screen and (max-width: 480px) {
+    .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    }
+    #myInput {
+    width: 80%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    }
+    button {
+    width: 80%;
+    background-color: blue;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    }
+    .lottery_ui {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    .lottery_ui_column_1,
+    .lottery_ui_column_2,
+    .lottery_ui_column_3,
+    .lottery_ui_column_4 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    div {
+    padding: 5px;
+    border: 1px solid black;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    }
+    }
+    }
+    }

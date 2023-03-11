@@ -19,6 +19,21 @@ function container() {
   const slot16 = document.getElementById("slot_16");
   return { input, error, slot1,slot2,slot3,slot4,slot5,slot6,slot7,slot8,slot9,slot10,slot11,slot12,slot13,slot14,slot15,slot16 };
 }
+// document.getElementById("myInput").addEventListener("keyup", function(event) {
+//   event.preventDefault();
+//   if (event.keyCode === 13) {
+//     submitInput();
+//   }
+// });
+
+// this section is for users Enter button to work on input field yarrrrr this code sucks but it works
+document.getElementById("myInput").addEventListener("keyup", function(event) {
+  event.preventDefault();
+  if (event.key === "Enter") {
+    submitInput();
+  }
+});
+
 
 function submitInput() {
   const values = container();
