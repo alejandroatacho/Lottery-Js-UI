@@ -48,6 +48,18 @@ html, body {
   font-size: 16px;
 }
 
+#slot_base_answer {
+  color: red;
+}
+
+#slot_mirror_answer {
+  color: darkblue;
+}
+
+#slot_flip_answer {
+  color: green;
+}
+
 button {
   background-color: var(--var-button_background);
   color: var(--var-background_color);
@@ -57,12 +69,21 @@ button {
   margin-top: 20px;
 }
 
+.lottery_answers {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.lottery_answers .lottery_titles h4 {
+  font-weight: bold;
+  font-size: 16px;
+}
+
 .lottery_answers_ui {
   display: flex;
   flex-direction: row;
 }
 .lottery_answers_ui div {
-  margin-right: 2px;
+  margin-right: 5px;
 }
 
 .lottery_ui {

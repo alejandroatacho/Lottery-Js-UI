@@ -1,3 +1,4 @@
 /src/style/*.css
 /src/style/*.css.map
 !important /src/style/style.css
+!important /src/style/menu.css
