@@ -1,12 +1,12 @@
 :root {
   --var-button_background: #40A8BF;
+  --var-background-image:url("../images/bgbgbg.png");
   --var-background_color: antiquewhite;
 }
 html, body {
   height: 100%;
   margin: 0;
   font-family: "Roboto", sans-serif;
-  background-color: var( --var-background_color);
 }
 
 // body {
@@ -16,6 +16,9 @@ html, body {
 // }
 
 .container {
+  background-image: var( --var-background-image);
+  background-repeat: no-repeat;
+  background-size:cover;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -70,6 +73,8 @@ button {
   // width:100%;
   margin-top:15px;
   margin-bottom:15px;
+  background-color: aliceblue;
+  padding: 10px 20px 10px 20px;
   .lottery_titles h4{
     font-weight:bold;
     font-size:16px;
@@ -101,6 +106,7 @@ button {
     width: 100%;
     border: 1px solid black;
     display: inline-block;
+    background-color: aliceblue;
 
     div {
       padding-top: 5px;
@@ -123,7 +129,7 @@ footer {
   background-color: #333;
   color: #fff;
   text-align: center;
-  padding: 10px;
+  padding-top: 20px;
   width: 100%;
   height: $footer-height;
   position: static;
