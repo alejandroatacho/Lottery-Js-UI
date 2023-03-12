@@ -102,6 +102,14 @@ function submitClear() {
 
 function submitInput() {
   const values = container();
+document.querySelector('.lottery_answers_ui').style.display = "block";
+document.querySelector('.lottery_base_grid').style.display = "block";
+document.querySelector('.lottery_mirror_grid').style.display = "block";
+document.querySelector('.lottery_flip_grid').style.display = "block";
+document.querySelector('.lottery_answers').style.display = "block";
+document.querySelector('.lottery_answers_ui').style.display = "flex";
+document.querySelector('.lottery_input').style.marginTop = "75px";
+
   function baseGrid(){
   if (values.input.length !== 4 || isNaN(parseInt(values.input))) {
     // alert('Please enter a 4-digit number');

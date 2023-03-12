@@ -1,8 +1,16 @@
 :root {
   --var-button_background: #40A8BF;
   --var-background-image:url("../images/bgbgbg.png");
-  --var-background-image2:url("../images/bgbgbg.png");
+  --var-background-image2:url("../images/applesauce2.jpg");
   --var-background_color: antiquewhite;
+  --var-house-style-1: #304558;
+  --var-house-style-2: #CCE9EF;
+  --var-house-style-3: #90B8C9;
+  --var-house-style-4: #7292BC;
+}
+
+.lottery_answers_ui, .lottery_base_grid, .lottery_mirror_grid, .lottery_flip_grid, .lottery_answers {
+  display: none;
 }
 
 html, body {
@@ -12,7 +20,7 @@ html, body {
 }
 
 .container {
-  background-image: var(--var-background-image);
+  background-image: var(--var-background-image2);
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
@@ -20,7 +28,7 @@ html, body {
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: auto;
+  height: 597px;
 }
 .container .button_container {
   display: flex;
@@ -28,6 +36,14 @@ html, body {
 }
 .container .button_container button {
   margin-right: 15px;
+  font-weight: bold;
+  text-shadow: 0.75px 0.75px 1px #333;
+}
+
+.container::after {
+  content: "";
+  clear: both;
+  display: table;
 }
 
 .lottery_container {
@@ -40,7 +56,7 @@ html, body {
 .lottery_container .lottery_titles h4 {
   font-weight: bold;
   font-size: 16px;
-  color: #40A8BF;
+  color: var(--var-house-style-1);
   text-shadow: 0.75px 0.75px 1px #333;
 }
 
@@ -59,19 +75,19 @@ html, body {
 }
 
 #slot_base_answer {
-  color: red;
+  color: var(--var-house-style-1);
 }
 
 #slot_mirror_answer {
-  color: darkblue;
+  color: var(--var-house-style-2);
 }
 
 #slot_flip_answer {
-  color: green;
+  color: var(--var-house-style-4);
 }
 
 button {
-  background-color: var(--var-button_background);
+  background-color: var(--var-house-style-1);
   color: var(--var-background_color);
   padding: 10px 20px;
   border-radius: 5px;
@@ -79,21 +95,35 @@ button {
   margin-top: 20px;
 }
 
+.lottery_input {
+  margin-top: auto;
+}
+.lottery_input h4 {
+  font-weight: bold;
+  font-size: 16px;
+  text-shadow: 0.75px 0.75px 1px #333;
+  color: var(--var-house-style-1);
+}
+
 .lottery_answers {
   margin-top: 15px;
   margin-bottom: 15px;
-  background-color: aliceblue;
+  background-color: var(--var-button_background);
   padding: 10px 20px 10px 20px;
   border-style: inset;
   border-width: 7px;
-  border-color: coral;
+  border-color: var(--var-house-style-3);
   border-radius: 15px;
 }
 .lottery_answers .lottery_titles h4 {
   font-weight: bold;
   font-size: 16px;
   text-shadow: 0.75px 0.75px 1px #333;
-  color: #40A8BF;
+  color: var(--var-house-style-1);
+}
+.lottery_answers p, .lottery_answers div {
+  text-shadow: 0.75px 0.75px 1px #333;
+  font-weight: bold;
 }
 
 .lottery_answers_ui {
@@ -122,7 +152,7 @@ button {
   width: 100%;
   border: 1px solid black;
   display: inline-block;
-  background-color: aliceblue;
+  background-color: var(--var-house-style-2);
 }
 .lottery_ui .lottery_ui_column_1 div,
 .lottery_ui .lottery_ui_column_2 div,
@@ -199,19 +229,37 @@ footer a:hover {
 
 @media all {
   * {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Roboto", sans-serif;
     margin: 0;
   }
   p {
-    font-size: 12px;
+    font-size: 16px;
   }
 }
 @media only screen and (max-width: 480px) {
   .container {
+    background-image: var(--var-background-image2);
+    background-repeat: no-repeat;
+    background-size: cover;
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
+    height: auto;
+  }
+  .container .button_container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+  .container .button_container button {
+    width: 80%;
+    margin-bottom: 15px;
+    background-color: var(--var-button_background);
+    color: var(--var-background_color);
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
   }
   #myInput {
     width: 80%;
@@ -222,14 +270,17 @@ footer a:hover {
     border-radius: 4px;
     font-size: 16px;
   }
-  button {
-    width: 80%;
-    background-color: var(--var-button_background);
-    color: var(--var-background_color);
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 20px;
+  .lottery_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  .lottery_container .lottery_titles h4 {
+    font-weight: bold;
+    font-size: 16px;
+    color: #40A8BF;
+    text-shadow: 0.75px 0.75px 1px #333;
   }
   .lottery_ui {
     display: flex;
@@ -262,19 +313,10 @@ footer a:hover {
 }
 @media only screen and (max-width: 767px) {
   .container {
-    flex-direction: column;
-    align-items: center;
-  }
-  .container .button_container {
-    flex-direction: column;
-    margin-bottom: 20px;
-  }
-  .container .button_container button {
-    margin-bottom: 15px;
+    height: auto;
   }
   .lottery_container {
-    flex-direction: column;
-    align-items: center;
+    width: 100%;
   }
   .lottery_ui {
     width: 100%;
