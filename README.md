@@ -7,5 +7,5 @@
 
 
 ### Formula for the Lottery Ui
-<iframe width="560" height="315" src="https://www.youtube.com/embed/[VIDEO_ID]" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+[![Guide](https://img.youtube.com/vi/x28LkA88LmQ/0.jpg)](https://www.youtube.com/watch?v=x28LkA88LmQ)
 
