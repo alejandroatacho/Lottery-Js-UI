@@ -2,3 +2,4 @@
 /src/style/*.css.map
 !important /src/style/style.css
 !important /src/style/menu.css
+!important /src/style/how_to_use.css

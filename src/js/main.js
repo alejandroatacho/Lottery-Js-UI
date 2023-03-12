@@ -96,6 +96,7 @@ document.getElementById("myInput").addEventListener("keyup", function(event) {
 });
 function submitClear() {
   document.getElementById("myInput").value = "";
+  location.reload();
 }
 
 

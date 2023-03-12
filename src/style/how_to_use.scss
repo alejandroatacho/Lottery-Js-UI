@@ -1,0 +1,36 @@
+$primary-color: #333;
+$secondary-color: #999;
+
+body {
+    background-color: $primary-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+iframe {
+    box-shadow: 0px 0px 10px $secondary-color;
+    border-radius: 10px;
+    width: 80%;
+    height: 56.25%; /* 560 / 315 = 56.25 */
+}
+.return-button {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: #40A8BF;
+    padding: 10px 15px;
+    border-radius: 25px;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    
+    i {
+        margin-right: 10px;
+        font-size: 20px;
+    }
+}
