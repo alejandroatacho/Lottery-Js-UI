@@ -15,5 +15,5 @@ else
   echo "Failed to delete files or missing files exist."
   sleep 1
 fi
-open menu.html
+# open menu.html
 exit
