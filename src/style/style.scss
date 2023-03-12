@@ -12,6 +12,15 @@
 .lottery_answers_ui, .lottery_base_grid, .lottery_mirror_grid, .lottery_flip_grid,.lottery_answers {
   display: none;
 }
+.lottery_mirror_grid, .lottery_base_grid, .lottery_flip_grid 
+{
+  .lottery_titles h4 {
+    font-weight:bold;
+    font-size:16px;
+    color: var(--var-house-style-2)!important;
+    text-shadow: 0.75px 0.75px 1px #333;
+  }
+}
 
 html, body {
   height: 100%;
@@ -39,6 +48,7 @@ html, body {
     text-shadow: 0.75px 0.75px 1px #333;
     }
   }
+
 }
 
 .container::after {
@@ -85,7 +95,9 @@ html, body {
 
 #slot_flip_answer {
   color: var(--var-house-style-4);
+  
 }
+
 button {
   background-color: var(--var-house-style-1);
   color: var(--var-background_color);

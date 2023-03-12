@@ -13,6 +13,13 @@
   display: none;
 }
 
+.lottery_mirror_grid .lottery_titles h4, .lottery_base_grid .lottery_titles h4, .lottery_flip_grid .lottery_titles h4 {
+  font-weight: bold;
+  font-size: 16px;
+  color: var(--var-house-style-2) !important;
+  text-shadow: 0.75px 0.75px 1px #333;
+}
+
 html, body {
   height: 100%;
   margin: 0;
@@ -235,6 +242,19 @@ footer a:hover {
   }
   p {
     font-size: 16px;
+  }
+}
+@media (min-width: 1000px) and (max-width: 1900px) {
+  .container {
+    height: 1000px;
+    width: 100%;
+    display: flex;
+  }
+  .lottery_answers_ui {
+    display: flex;
+  }
+  .lottery_input {
+    margin-top: 75px;
   }
 }
 @media only screen and (min-width: 1920px) {

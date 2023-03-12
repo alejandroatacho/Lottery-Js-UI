@@ -7,6 +7,23 @@
     font-size: 16px;
   }
 }
+
+@media (min-width: 1000px) and (max-width:1900px) {
+  .container {
+    height: 1000px;
+    width: 100%;
+    display: flex;
+    // background-image: none;
+  }
+
+  .lottery_answers_ui {
+    display: flex;
+  }
+
+  .lottery_input {
+    margin-top: 75px;
+  }
+}
 @media only screen and (min-width: 1920px) {
   .container {
     height: 1000px;
